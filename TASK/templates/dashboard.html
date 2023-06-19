@@ -1,0 +1,160 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/dashboard.css')}}">
+         <!-- Font Awesome Cdn Link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
+        <title>Document</title>
+        
+    </head>
+    <body>
+        <nav>
+            <div class="logo-name">
+                <div class="logo-image">
+                    <img src="../static/images/logo6.jpeg" alt="">
+                </div>
+    
+                <span class="logo_name">Manager</span>
+            </div>
+    
+            <div class="menu-items">
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('dashboard')}}">
+                        <i class="uil uil-estate"></i>
+                        <span class="link-name">Dahsboard</span>
+                    </a></li>
+                    <li><a href="{{ url_for('home')}}">
+                        <i class="uil uil-files-landscapes"></i>
+                        <span class="link-name">Home</span>
+                    </a></li>
+                    <li><a href="{{ url_for('calendar')}}">
+                        <i class="uil uil-chart"></i>
+                        <span class="link-name">Calendar</span>
+                    </a></li>
+                    <li><a href="{{ url_for('Profile')}}">
+                        <i class="fas fa-user"></i>
+                        <span class="nav-item">Profile</span>
+                      </a></li>
+                 
+                    <li><a href="{{ url_for('missag')}}">
+                        <i class="uil uil-comments"></i>
+                        <span class="link-name">Task</span>
+                    </a></li>
+                    
+                </ul>
+                
+                <ul class="logout-mode">
+                    <li><a href="{{ url_for('login')}}" >
+                        <i class="uil uil-signout"></i>
+                        <span class="link-name" >Logout</span>
+                    </a></li>
+    
+                    <li class="mode">
+                        <a href="#">
+                            <i class="uil uil-moon"></i>
+                        <span class="link-name">Dark Mode</span>
+                    </a>
+    
+                    <div class="mode-toggle">
+                      <span class="switch"></span>
+                    </div>
+                </li>
+                </ul>
+            </div>
+        </nav>
+    
+        <section class="dashboard">
+            <div class="top">
+                <i class="uil uil-bars sidebar-toggle"></i>
+    
+                <div class="search-box">
+                    <i class="uil uil-search"></i>
+                    <input type="text" placeholder="Search here...">
+                </div>
+                
+                <img src="images/profile.jpg" alt="">
+            </div>
+            <section class="main">
+                <div class="main-top">
+                  <h1>Skills</h1>
+                  <i class="fas fa-user-cog"></i>
+                </div>
+                <div class="main-skills">
+                  <div class="card">
+                    <i class="fas fa-laptop-code"></i>
+                    <h3>Web developemt</h3>
+                    <p>Join Over 1 million Students.</p>
+                    <a href="https://www.w3schools.com/whatis/">
+                    <button >Get Started</button>
+                   </a>
+                  </div>
+                  <div class="card">
+                    <i class="fab fa-wordpress"></i>
+                    <h3>WordPress</h3>
+                    <p>Join Over 3 million Students.</p>
+                    <a href="https://wordpress.com/hosting/?aff=15767&cid=1654213&cmp_id=11549382845&adg_id=111353876614&kwd=wordpress&device=c&gclid=CjwKCAjws7WkBhBFEiwAIi168yfbIVD2OZGu_PvCFduaQgc4QQnH-TrDWCsUeMn6v8ASIgqCgt100hoCoDkQAvD_BwE"><button >Get Started</button></a>
+                  </div>
+                  <div class="card">
+                    <i class="fas fa-palette"></i>
+                    <h3>graphic design</h3>
+                    <p>Join Over 2 million Students.</p>
+                    <a href="https://www.coohom.com/pub/market/account/signup?utm_source=googlead&utm_medium=cpc&utm_campaign=B2C_Search_Fr_20230424&gclid=CjwKCAjws7WkBhBFEiwAIi168-hKkHyHsSVwSRb_Y-26sgtNjNZ7_qI1ZzzcXhpfmTC1jBguR1u59BoC_FwQAvD_BwE"><button>Get Started</button></a>
+                  </div>
+                  <div class="card">
+                    <i class="fab fa-app-store-ios"></i>
+                    <h3>IOS dev</h3>
+                    <p>Join Over 1 million Students.</p>
+                     <a href="https://devtechnosys.com/mobile-app-development.php?param=cpc&gad=1&gclid=CjwKCAjws7WkBhBFEiwAIi1688RRQhTNUAcXA0J-axFl0s9fYjpsZl41CUyKjYmfBcFs2X5iUP81VhoCAlcQAvD_BwE"><button>Get Started</button></a>
+                  </div>
+                </div>
+          
+                <section class="main-course">
+                  <h1>My courses</h1>
+                  <div class="course-box">
+                    <ul>
+                      <li class="active">In progress</li>
+                     
+                    </ul>
+                    <div class="course">
+                      <div class="box">
+                        <h3>HTML</h3>
+                        <p>80% - progress</p>
+                        <button>continue</button>
+                        <i class="fab fa-html5 html"></i>
+                      </div>
+                      <div class="box">
+                        <h3>CSS</h3>
+                        <p>50% - progress</p>
+                        <button>continue</button>
+                        <i class="fab fa-css3-alt css"></i>
+                      </div>
+                      <div class="box">
+                        <h3>JavaScript</h3>
+                        <p>30% - progress</p>
+                        <button>continue</button>
+                        <i class="fab fa-js-square js"></i>
+                      </div>
+                      <div class="box">
+                        <h3>python</h3>
+                        <p>30% - progress</p>
+                        <button>continue</button>
+                        <i class="fab fa-python python"></i>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </section>
+            </div>
+            
+        </section>
+        <script type="text/javascript" src="{{ url_for('static', filename='js/dashboard.js')}}"></script>
+    </body>
+    </html>
+{% endblock %}

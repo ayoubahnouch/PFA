@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/register.css')}}">
+</head>
+
+
+<body>
+    {% with messages = get_flashed_messages(with_categories=true) %}
+            {% for category_name, message in messages %}
+                {% if category_name == 'success' %}
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% elif category_name == 'error' %}
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        {% endwith %}
+
+       <div class="nono">
+          <h1>register</h1>
+
+           <form action="" method="post" class="nav2">
+              {{ form.hidden_tag() }}
+              {{ form.email }}<br>
+               {{ form.password }}<br><br>
+               {{ form.submit }}
+            
+             </form><br><br>
+           <a href=" {{ url_for('login')}} ">Already have an accunt? Login</a>
+
+        </div> 
+</body>
+</html>

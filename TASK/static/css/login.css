@@ -1,0 +1,94 @@
+/* Style for the login form */
+
+body {
+    background-color: #f0f0f0;
+    font-family: Arial, sans-serif;
+    background: -webkit-linear-gradient(left, mediumpurple, lightsalmon);
+    background: -o-linear-gradient(left, mediumpurple, lightsalmon);
+    background: linear-gradient(to right, mediumpurple, lightsalmon);
+  }
+  
+  form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 80px;
+    background-color: #fff;
+    border-radius: 60px;
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+    position: relative;
+    
+    height: 200px;
+    top: 200px;
+    left: 50px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .input_box {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #F754FF;
+    border-radius: 5px;
+    outline: none;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    background-color:#F754FF;
+    color:#F754FF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #F754FF;
+  }
+  
+  a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+    color:#F754FF;
+    text-decoration: none;
+    
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  .ver{
+    background-color: #F754FF;
+    color: #F754FF;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 16px;
+    text-decoration: none;
+    background: #F754FF;
+  }
+
+
+

@@ -1,0 +1,133 @@
+/* Import Google font - Poppins */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+a {
+  text-decoration: none;
+ 
+}
+.header {
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  z-index: 100;
+  padding: 0 20px;
+  
+}
+.nav {
+  max-width: 1000px;
+  width: 100%;
+  margin: 0 auto;
+  
+}
+.nav,
+.nav_item {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav_link,
+.button {
+  color: #fff;
+  
+}
+.nav_link,
+.button1 {
+  color: #fff;
+  
+}
+.logo  img{
+  width:280px;
+  height:160px;
+  position: relative;
+    
+    
+    top: 30px;
+    left: -300px;
+}
+.nav_item {
+  column-gap: 25px;
+}
+.nav_link:hover {
+  color: #d9d9d9;
+}
+.button {
+  padding: 6px 10px;
+  border: 1px solid rgba(247, 84, 255, 1);
+  background: rgba(247, 84, 255, 1);
+  border-radius: 10px;
+  cursor: pointer;
+ 
+}
+.button1 {
+  padding: 6px 10px;
+  border: 1px solid rgba(70, 18, 145, 1);
+  background: rgba(70, 18, 145, 1);
+  border-radius: 10px;
+  cursor: pointer;
+ 
+}
+.button:active {
+  transform: scale(0.98);
+}
+.button1:active {
+  transform: scale(0.98);
+}
+
+/* Home */
+body {
+  position: relative;
+  height: 100vh;
+  width: 100%;
+  background-image: url("../images/bgi.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+.header::before {
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  z-index: 100;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.5s ease-out;
+}
+.header.show::before {
+  opacity: 1;
+  pointer-events: auto;
+}
+.text h1{
+  font-size: 2.7rem;
+  letter-spacing: 1px;
+  top: 280px;
+ 
+  left: 200px;
+  position: relative;
+  color: #fff;
+}
+.text p{
+  font-size: 0.8rem;
+  letter-spacing: 2px;
+  top: 320px;
+ 
+  left: 250px;
+  position: relative;
+  color: #fff;
+}
+.text h3{
+  font-size: 1.5rem;
+  letter-spacing: 2px;
+  top: 360px;
+ 
+  left: 250px;
+  position: relative;
+  color: #fff;
+}

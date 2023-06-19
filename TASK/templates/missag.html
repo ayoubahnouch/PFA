@@ -1,0 +1,62 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/missag.css')}}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <header>
+		<h1>Task List 2021</h1>
+		<form id="new-task-form">
+			<input 
+				type="text" 
+				name="new-task-input" 
+				id="new-task-input" 
+				placeholder="What do you have planned?" />
+			<input 
+				type="submit"
+				id="new-task-submit" 
+				value="Add task" />
+		</form>
+	</header>
+	<main>
+		<section class="task-list">
+			<h2>Tasks</h2>
+
+			<div id="tasks">
+
+				<div class="task">
+					<div class="content">
+						<input 
+							type="text" 
+							class="text" 
+							value="A new task"
+							readonly>
+					</div>
+					<div class="actions">
+						<button class="edit">Edit</button>
+						<button class="delete">Delete</button>
+					</div>
+				</div> 
+
+			</div>
+		</section>
+	</main>
+   
+
+    <script type="text/javascript" src="{{ url_for('static', filename='js/missag.js')}}"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/store.js/2.0.12/store.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/local-storage-fallback@1.1.1/dist/local-storage-fallback.min.js"></script>
+</body>
+</html>
+
+
+
+
+{% endblock %}
