@@ -23,9 +23,7 @@ login_manager = LoginManager()
 login_manager.init_app(app)
 login_manager.login_view = 'login'
 
-login_manager = LoginManager()
-login_manager.init_app(app)
-login_manager.login_view = 'Admin1'
+
 
 
 @login_manager.user_loader
@@ -38,22 +36,7 @@ class User(db.Model, UserMixin):
     email = db.Column(db.String(50), nullable=False, unique=True) 
     password = db.Column(db.String(80), nullable=False)
 
-class task(db.Model,UserMixin):
-     id = db.Column(db.Integer, primary_key=True)
-     task=db.Column(db.String(100), nullable=False)
-     start_date = db.Column(db.Date, nullable=True)
-     end_date=db.Column(db.Date, nullable=True)
 
-     def __repr__(self):
-         return f"<Task {self.id}>"
-     
-class task(db.Model, UserMixin):
-    __tablename__ = 'task'
-    id = db.Column(db.Integer, primary_key=True)
-    # Add more columns as needed
-    start_date = db.Column(db.Date, nullable=True)
-
-task_table = db.Table('u', db.metadata, extend_existing=True)
 
 
 
@@ -166,15 +149,8 @@ def register():
                 db.session.rollback()
 
     return render_template('register.html', form=form)
-class User(db.Model,UserMixin):
-     id=db.Column(db.Integer, primary_key=True)
-     
-     task=db.Column(db.String(100), nullable=False)
-     start_date=db.Column(db.date, nullable=True)
-     end_date=db.Column(db.date, nullable=True)
 
-     def __repr__(self):
-         return f"<Task {self.id}>"
+         
 
 @app.route('/')
 def home():
